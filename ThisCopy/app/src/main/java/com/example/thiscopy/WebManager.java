@@ -89,7 +89,6 @@ public class WebManager {
          postValue.add(POST.get(i));
       }
    }
-
    public boolean doLogin(String _id, String _pw) throws UnknownHostException
    {
       post = new HttpPost(ConstTable.URL.LOG_IN);

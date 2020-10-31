@@ -16,12 +16,10 @@ import java.net.URL;
 
 public class ParsingJson extends AsyncTask<String, Void, String>
 {
-
+    //2020.10.18 git에 업데이트 시작
     /** Json 파일을 Parsing 하기 위해 만들어진 Class
      * 2019. 06 Yun I.H */
-
     final static String TAG="ParsingJson";
-
     JSONArray jsonArray;
     private String parsingStr,receiveMsg;
     private String parsingURL;
@@ -29,12 +27,10 @@ public class ParsingJson extends AsyncTask<String, Void, String>
     String clientKey="#########################";
     String values[][]; // 저장되는 파싱 값들
     int valueCnt; // 파싱 값들 갯수
-
     //1. 필요한 변수선언
     //2. 필요한 함수 생성
     //3. json 받아오기
     //4. json 으로 받아온 문자열을 type 마다 하나씩 끊어서 주기!
-
     public void setParsingURL(String url)
     {
         parsingURL = url;
@@ -50,13 +46,10 @@ public class ParsingJson extends AsyncTask<String, Void, String>
             Types[i]=types[i];
         }
     }
-
-
     public int getValueCnt()
     {
         return valueCnt;
     }
-
     /* 비동기 진행으로 json 받아오기 */
     @Override
     protected String doInBackground(String... strings)
@@ -112,8 +105,6 @@ public class ParsingJson extends AsyncTask<String, Void, String>
         }
         return null;
     }
-
-
     /* json 으로 받아온 문자열을 type 마다 하나씩 끊어서 주기! */
     private String[] JsonParser(JSONArray jsonArray, String[] type,int index)
     {
@@ -138,8 +129,6 @@ public class ParsingJson extends AsyncTask<String, Void, String>
         }
         return ret;
     }
-
-
     public String[][] getData(String title)
     {
         /* JsonArray 미리 셋팅 후 하나씩 각 타이틀마다 Line을 나누어 함수에 전달 */
@@ -164,7 +153,6 @@ public class ParsingJson extends AsyncTask<String, Void, String>
         }
         return values;
     }
-
     public String getOneData(String type)
     {
         String ret= "Null";

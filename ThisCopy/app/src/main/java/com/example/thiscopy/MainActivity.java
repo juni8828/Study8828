@@ -1,16 +1,17 @@
 package com.example.thiscopy;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.textfield.TextInputEditText;
+
+import java.net.URI;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity
     String Password_data="1234";
     String Email_put="";
     String Password_put="";
+    URI url;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
